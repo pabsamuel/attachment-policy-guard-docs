@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Attachment Policy Guard for Jira — Atesen Software</title>
+<style>
+  :root { --bg:#ffffff; --fg:#172b4d; --muted:#5e6c84; --line:#dfe1e6; --accent:#0b6ea8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12161c; --fg:#e6edf3; --muted:#9aa7b4; --line:#2b323b; --accent:#5aa9d6; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 16px 64px; }
+  h1 { font-size:1.6rem; line-height:1.3; margin:0 0 8px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; }
+  ul, ol { padding-left:20px; }
+  a { color:var(--accent); }
+  code { background:rgba(127,127,127,.15); padding:1px 4px; border-radius:4px; font-size:.9em; }
+  table { border-collapse:collapse; width:100%; margin:16px 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:rgba(127,127,127,.08); }
+  .back { display:inline-block; margin-bottom:24px; font-size:.9rem; }
+  footer { margin-top:40px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Attachment Policy Guard for Jira</a>
+<h1>Support</h1>
+<p><strong>App:</strong> Attachment Policy Guard for Jira · <strong>Publisher:</strong> Atesen Software<br>
+<strong>Email:</strong> sametatesen2@gmail.com · <strong>First response target:</strong> 1 business day (Monday–Friday, Istanbul time, UTC+3)</p>
+
+<h2>Getting started</h2>
+<ol>
+<li>Open <strong>Jira settings → Apps → Attachment Policy Guard</strong>. You need Jira administrator permission.</li>
+<li>The app starts in <strong>report mode</strong>: nothing is removed. Review the default policy (executables, scripts and disk images are blocked) and adjust it.</li>
+<li>Use <strong>Test a file</strong> to check a sample file against your unsaved policy.</li>
+<li>Watch the <strong>audit log</strong> for a few days. When it only shows files you really want removed, switch to <strong>enforce mode</strong>.</li>
+</ol>
+
+<h2>When you write to us</h2>
+<ul>
+<li>Your site URL (<code>yoursite.atlassian.net</code>)</li>
+<li>The work item key and roughly when the file was attached</li>
+<li>The audit log row (Result and Reason), or a note that no row appeared</li>
+<li>Whether the app was in report mode or enforce mode</li>
+</ul>
+<p>Please do not send the file itself unless we ask for it.</p>
+
+<h2>Severity and response</h2>
+<table>
+<thead><tr><th>Severity</th><th>Example</th><th>Target</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>Files the policy should allow were removed, or blocked files are not removed in enforce mode</td><td>Same-day acknowledgement; fix or workaround within 2 business days</td></tr>
+<tr><td>S2</td><td>The app does not check new attachments at all, or the settings page does not load</td><td>3 business days</td></tr>
+<tr><td>S3</td><td>Question or feature request</td><td>Answered in the next weekly pass</td></tr>
+</tbody>
+</table>
+
+<h2>Known limits</h2>
+<ul>
+<li><strong>Jira does not let apps block an upload before it happens.</strong> In enforce mode the file is removed within seconds after upload. Notification emails sent in that window may still mention the file.</li>
+<li>Removed attachments cannot be restored by the app. Start in report mode.</li>
+<li>Only attachments added after the app is installed are checked. Existing attachments are never touched.</li>
+<li>The app reads the first 4 KB of each new attachment to identify its type. It is not antivirus software.</li>
+<li>If the content cannot be read, the file is kept and flagged in the audit log, unless you choose to treat such files as blocked.</li>
+<li>The audit log keeps policy matches for 90 days. CSV export includes up to 5,000 entries.</li>
+</ul>
+
+<h2>Updates</h2>
+<p>Releases are published through the Atlassian Marketplace with release notes. Minor updates install automatically; an update that requires new permissions needs a Jira administrator to approve it.</p>
+
+<h2>Security reports</h2>
+<p>Email sametatesen2@gmail.com with the subject line <strong>SECURITY</strong>. We acknowledge within 1 business day and will tell you when a fix ships.</p>
+<footer>Atesen Software · <a href="mailto:sametatesen2@gmail.com">sametatesen2@gmail.com</a></footer>
+</div>
+</body>
+</html>

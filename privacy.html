@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Attachment Policy Guard for Jira — Atesen Software</title>
+<style>
+  :root { --bg:#ffffff; --fg:#172b4d; --muted:#5e6c84; --line:#dfe1e6; --accent:#0b6ea8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12161c; --fg:#e6edf3; --muted:#9aa7b4; --line:#2b323b; --accent:#5aa9d6; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 16px 64px; }
+  h1 { font-size:1.6rem; line-height:1.3; margin:0 0 8px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; }
+  p, li { color:var(--fg); }
+  ul, ol { padding-left:20px; }
+  a { color:var(--accent); }
+  table { border-collapse:collapse; width:100%; margin:16px 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:rgba(127,127,127,.08); }
+  .back { display:inline-block; margin-bottom:24px; font-size:.9rem; }
+  footer { margin-top:40px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Attachment Policy Guard for Jira</a>
+<h1>Privacy Policy</h1>
+<p><strong>App:</strong> Attachment Policy Guard for Jira<br>
+<strong>Publisher:</strong> Atesen Software (independent developer, Türkiye)<br>
+<strong>Contact:</strong> sametatesen2@gmail.com<br>
+<strong>Last updated:</strong> 3 October 2026</p>
+
+<h2>1. What this app does with data</h2>
+<p>The app runs inside your Atlassian Cloud site on the Atlassian Forge platform. When a file is attached to a work item in a project where your policy is on, Jira notifies the app and the app processes:</p>
+<ul>
+<li>attachment details: attachment ID, file name, size, MIME type, project ID, work item ID and key, and the Atlassian account ID of the person who uploaded it;</li>
+<li>the <strong>first 4 KB of the file</strong>, read in memory to identify the real file type (for example, an executable renamed to <code>.pdf</code>). <strong>File contents are never stored.</strong></li>
+<li>the policy settings a Jira administrator saves, and the Atlassian account ID of the administrator who last saved them.</li>
+</ul>
+<p>When an administrator uses <strong>Test a file</strong> on the settings page, the browser sends the first 4 KB of the chosen local file to the app so it can show the result. That data is not stored and is not uploaded to Jira.</p>
+<p>The app does not read descriptions, comments or other work item fields. It looks up a work item only to show its key in the audit log.</p>
+
+<h2>2. What the app changes on your site</h2>
+<p>In <strong>report mode</strong> (the default after installation) the app changes nothing; it only records policy matches. In <strong>enforce mode</strong> the app removes attachments that break the policy and, if you choose, adds a note to the work item. Removed attachments are deleted by Jira; <strong>the app keeps no copy</strong>.</p>
+
+<h2>3. Where data is stored</h2>
+<p>All processing and storage happen on Atlassian's Forge platform, inside Atlassian's cloud infrastructure. <strong>The app has no servers of its own and sends no data to Atesen Software or to any third party.</strong> It makes no outbound network calls. There are no analytics services, no advertising networks, no AI services and no sub-processors.</p>
+
+<h2>4. How long data is kept</h2>
+<table>
+<thead><tr><th>Data</th><th>Kept for</th></tr></thead>
+<tbody>
+<tr><td>Audit log entries (only for files that matched the policy; allowed files are not recorded)</td><td>Deleted automatically 90 days after they are created</td></tr>
+<tr><td>Processing locks (attachment ID only, to avoid handling the same file twice)</td><td>Deleted automatically after 2 days</td></tr>
+<tr><td>Policy settings</td><td>Until you change them or uninstall the app</td></tr>
+<tr><td>File contents</td><td>Never stored</td></tr>
+</tbody>
+</table>
+<p>Uninstalling the app removes the app's storage according to Atlassian's Forge data retention policies.</p>
+
+<h2>5. Logs</h2>
+<p>The app writes application logs for troubleshooting. These logs contain the event type, the decision (allowed or blocked), the action taken and error types. <strong>They never contain file names, account IDs, work item keys or note text.</strong> Forge logs are stored by Atlassian and are visible to the publisher only through Atlassian's developer tooling, with Atlassian's own retention limits.</p>
+
+<h2>6. Roles</h2>
+<p>For the data processed by this app, your organization is the controller. Atesen Software acts as a processor to the limited extent the app runs on your site. Atlassian is the infrastructure provider; see Atlassian's own privacy policy for how they process data in your cloud site.</p>
+
+<h2>7. Your requests</h2>
+<p>To ask about data handled by this app, or to request deletion of app data on your site, write to sametatesen2@gmail.com.</p>
+
+<h2>8. Security</h2>
+<p>The app requests only the Atlassian scopes it needs: reading work items and attachments, removing attachments and adding notes, and app storage. The settings page is a Jira administration page, visible only to Jira administrators.</p>
+
+<h2>9. Changes</h2>
+<p>Material changes to this policy are announced in the app's release notes on the Atlassian Marketplace listing.</p>
+<footer>Atesen Software · <a href="mailto:sametatesen2@gmail.com">sametatesen2@gmail.com</a></footer>
+</div>
+</body>
+</html>
