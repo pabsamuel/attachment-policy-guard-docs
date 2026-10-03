@@ -58,6 +58,7 @@
 </tbody>
 </table>
 <p>Uninstalling the app removes the app's storage according to Atlassian's Forge data retention policies.</p>
+<p>Once a week the app reports the Atlassian account IDs it stores to Atlassian's personal data reporting API. When Atlassian reports that an account has been closed, the app removes that account ID from its audit log and settings. The app stores no names, email addresses or other profile data.</p>
 
 <h2>5. Logs</h2>
 <p>The app writes application logs for troubleshooting. These logs contain the event type, the decision (allowed or blocked), the action taken and error types. <strong>They never contain file names, account IDs, work item keys or note text.</strong> Forge logs are stored by Atlassian and are visible to the publisher only through Atlassian's developer tooling, with Atlassian's own retention limits.</p>
@@ -69,7 +70,7 @@
 <p>To ask about data handled by this app, or to request deletion of app data on your site, write to sametatesen2@gmail.com.</p>
 
 <h2>8. Security</h2>
-<p>The app requests only the Atlassian scopes it needs: reading work items and attachments, removing attachments and adding notes, and app storage. The settings page is a Jira administration page, visible only to Jira administrators.</p>
+<p>The app requests only the Atlassian scopes it needs: reading work items and attachments, removing attachments and adding notes, app storage, and personal data reporting. The settings page is a Jira administration page, visible only to Jira administrators.</p>
 
 <h2>9. Changes</h2>
 <p>Material changes to this policy are announced in the app's release notes on the Atlassian Marketplace listing.</p>
