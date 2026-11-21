@@ -37,7 +37,20 @@
 <li>Watch the <strong>audit log</strong> for a few days. When it only shows files you really want removed, switch to <strong>enforce mode</strong>.</li>
 </ol>
 
-<h2>When you write to us</h2>
+<section id="first-report" aria-labelledby="first-report-heading">
+<h2 id="first-report-heading">Try a file rule in report mode</h2>
+<p>Use a Jira test site and a PNG with no sensitive information. The temporary rule applies to every project on that site that inherits the site policy. Record the original settings so you can restore them after the test.</p>
+<ol>
+<li>Select <strong>Report only</strong> and add <code>png</code> to <strong>Also block these extensions</strong>.</li>
+<li>Choose the PNG under <strong>Test a file</strong>. Look for <strong>This file would be blocked.</strong> The preview checks your draft site policy.</li>
+<li>Choose <strong>Save policy</strong> and confirm the saved policy shows <strong>Report only</strong>. Check that the test project is set to <strong>Use site policy</strong>.</li>
+<li>Attach the same PNG to a test issue. In <strong>Audit log</strong>, find <strong>Would remove (report mode)</strong> for that issue, then confirm the PNG is still attached.</li>
+<li>Restore the original settings and save the policy.</li>
+</ol>
+<p>If the audit row is missing after the upload, <a href="#support-details">send the issue key and upload time to support</a>.</p>
+</section>
+
+<h2 id="support-details">When you write to us</h2>
 <ul>
 <li>Your site URL (<code>yoursite.atlassian.net</code>)</li>
 <li>The work item key and roughly when the file was attached</li>
